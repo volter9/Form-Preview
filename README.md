@@ -64,7 +64,7 @@ jQuery Form Preview plugin supports three data-* attributes to help you build pr
 In the `#id` element you should put desired HTML with following attributes:
 
 * `data-preview="field"` - Field which will be used to fill information inside of the element (`.html()` is used for non attribute fields). **Required attribute** in order to make work other data-* attributes.
-* `data-attribute="attribute"` - Specify attribute to fill values in attribute instead of content. **Only one attribute** is supported yet.
+* `data-attr="attribute"` - Specify attribute to fill values in attribute instead of content. **Only one attribute** is supported yet.
 * `data-pattern="Peter %s pattern %s"` - If you need not just output, but also a label in front of it, or you want to use the value twice or three times, then this it is a job for *super-pattern-man*. Use `%s` to insert your value. data-pattern **works with** data-preview as well as with data-attribute.
 
 That's it! Thank you for attention, fellows!
