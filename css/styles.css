@@ -1,0 +1,211 @@
+/**
+ * jQuery Form Preview website CSS styles
+ * 
+ * @author volter9
+ * @copyright volter9 (c) 2014
+ */
+
+/* Common styles */
+
+body {
+	margin: 0px;
+}
+
+pre {
+	margin: 0px;
+}
+
+pre code {
+	font-size: 12px;
+	line-height: 140%;
+	tab-size: 4;
+	-o-tab-size: 4;
+	-moz-tab-size: 4;
+}
+
+/* Main styles */
+
+body > div.group,
+body > header,
+body > section,
+body > article,
+body > footer {
+	margin: 0px auto;
+	width: 900px;
+}
+
+/* Navigation */
+
+body > div.group {
+	margin: 20px auto;
+	margin-bottom: 40px;
+}
+
+body > div.group > div.left {
+	font-family: Arial;
+	font-size: 18px;
+	
+	padding: 8px 0px;
+}
+
+body > div.group > div.left a {
+	color: #333;
+	text-decoration: none;
+}
+
+body > div.group > nav.navbar {
+	margin: 8px 0px;
+}
+
+body > div.group > nav.navbar li {
+	margin: 0px;
+	margin-left: 5px;
+}
+
+body > div.group > nav li a {
+	border-radius: 20px;
+	font-size: 13px;
+	line-height: 100%;
+	
+	padding: 8px;
+}
+
+body > div.group > nav li a:hover,
+body > div.group > nav li a.active {
+	box-shadow: inset 0px 1px 4px #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+/* Header */
+
+body > header h1 {
+	font-size: 2em;
+	line-height: 130%;
+}
+
+body > header p.lead {
+	font-size: 1.2em;
+	margin-bottom: 12px;
+}
+
+body > header div.unit-60 {
+	padding-left: 20px;
+}
+
+body > header div.unit-60 > p {
+	font-size: 16px;
+	
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+/* S.H.I.E.L.D card */
+
+#avenger-preview {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	
+	margin-bottom: 10px;
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+#avenger-preview p.lead {
+	font-size: 1.3em;
+	line-height: 100%;
+	
+	margin-bottom: 4px;
+}
+
+#avenger-preview p.aka {
+	color: #888;
+	font-size: 12px;
+}
+
+#avenger-preview p {
+	font-size: 14px;
+	
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+#avenger-preview .unit-50 p {
+	font-weight: 600;
+}
+
+#avenger-preview ul {
+	list-style: square;
+	
+	margin: 0px;
+	margin-left: 15px;
+	padding: 0px;
+}
+
+#avenger-preview ul li {
+	font-size: 13px;
+}
+
+#avenger-preview .units-row {
+	margin: 0px;
+}
+
+/* Avenger form */
+
+#avenger-form {
+	padding: 10px;
+}
+
+#avenger-form h2 {
+	margin: 0px;
+}
+
+#avenger-form .blocks-2 {
+	margin: 0px;
+}
+
+#avenger-form .blocks-2 li {
+	margin-left: 0px;
+	margin-bottom: 10px;
+	width: 48%;
+}
+
+#avenger-form .blocks-2 li:nth-child(odd) {
+	margin-right: 2%;
+}
+
+#avenger-form .blocks-2 li:nth-child(even) {
+	margin-left: 2%;
+}
+
+#avenger-form .blocks-2 label {
+	margin: 0px;
+}
+
+#avenger-form label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+#avenger-form label input,
+#avenger-form label textarea {
+	font-size: 12px;
+	
+	display: block;
+	margin-top: 5px;
+	width: 100%;
+}
+
+#avenger-form label textarea {
+	min-height: 100px;
+}
+
+/* Footer */
+
+body > footer {
+	color: #888;
+	font-size: 12px;
+	text-align: center;
+	
+	padding: 15px;
+}

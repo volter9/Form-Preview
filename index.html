@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<meta charset="UTF-8"/>
+		<title>Homepage - Form Preview</title>
+		
+		<link href="css/kube.min.css" rel="stylesheet" type="text/css"/>
+		<link href="css/styles.css" rel="stylesheet" type="text/css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+		<script src="https://cdn.rawgit.com/Volter9/jQuery-Form-Preview/master/form-preview.min.js" type="text/javascript"></script>
+		<script src="js/avengers.js" type="text/javascript"></script>
+		<script src="js/avengers.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="js/styles/github.css">
+		<script src="js/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		
+	</head>
+	
+	<body>
+		
+		<!-- Naviagtion -->
+		<div class="group">
+			<div class="left">
+				<a href="#">Form Preview</a>
+			</div>
+		
+			<nav class="navbar navbar-right">
+				<ul>
+					<li>
+						<a class="active" href="#">Home</a>
+					</li>
+					<!--
+					<li>
+						<a href="#">
+							For jQuery
+						</a>
+					</li> 
+					<li>
+						<a href="#" title="Coming soon...">
+							For VanillaJS
+						</a>
+					</li>
+					-->
+					<li>
+						<a href="https://github.com/Volter9/jQuery-Form-Preview">
+							GitHub
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+		<!-- Header -->
+		<header>
+			<div class="units-row">
+				<section class="unit-40">
+					<h1>Preview your forms with Form Preview.</h1>
+					
+					<p class="lead">Form Preview is a jQuery plugin. Its task is to simplify previewing input from forms.</p>
+					<p class="lead">You can use this wonderful jQuery plugin for previewing user profiles, article or even a shop item card.</p>
+					<p>To get started, read the README.md document on <a href="https://github.com/Volter9/jQuery-Form-Preview">Form Preview's repository</a>.</p>
+					<p>VanillaJS version is coming soon.</p>
+				</section>
+				
+				<div class="unit-60">
+					<p class="shield">S.H.I.E.L.D Report Card:</p>
+					
+					<div id="avenger-preview">
+						<div class="units-row">
+							<div class="unit-20">
+								<img alt="Avenger" title="Avenger profile picture" data-preview="avatar" data-attr="src"/>
+							</div>
+							
+							<div class="unit-80">
+								<p class="lead">
+									<span data-preview="first"></span> 
+									<span data-preview="last"></span>
+								</p>
+								
+								<p class="aka" data-preview="alias" data-pattern="Also known as %s"></p>
+								
+								<p class="description" data-preview="description"></p>
+								
+								<div class="units-row">
+									<div class="unit-50">
+										<p>Strengths</p>
+										
+										<ul data-preview="pros"></ul>
+									</div>
+									
+									<div class="unit-50">
+										<p>Weaknesses</p>
+										
+										<ul data-preview="cons"></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<form id="avenger-form">
+						<h2>Fill the form, Avenger</h2>
+						
+						<ul class="blocks-2">
+							<li>
+								<label>
+									First name:
+									<input name="first" type="text"/>
+								</label>
+							</li>
+							
+							<li>
+								<label>
+									Last name:
+									<input name="last" type="text"/>
+								</label>
+							</li>
+						</ul>
+						
+						<label>
+							Pseudonym:
+							<input name="alias" type="text"/>
+						</label>
+						
+						<label>
+							Description:
+							<textarea name="description"></textarea>
+						</label>
+						
+						<ul class="blocks-2">
+							<li>
+								<label>
+									List strengths:
+									<textarea name="pros"></textarea>
+								</label>
+							</li>
+							
+							<li>
+								<label>
+									List weaknesses:
+									<textarea name="cons"></textarea>
+								</label>
+							</li>
+						</ul>
+						
+						<label>
+							Avatar:
+							<select name="avatar">
+								<option value="img/ironman-200.jpg">Iron Man's avatar</option>
+								<option value="img/steverogers-200.jpg">Captain's avatar</option>
+								<option value="img/thorodinson-200.jpg">Thor's avatar</option>
+							</select>
+						</label>
+					</form>
+				</div>
+			</div>
+		</header>
+		
+		<!-- Footer -->
+		<footer>
+			Brought to you by <a href="https://github.com/Volter9">volter9</a>
+		</footer>
+		
+	</body>
+</html>

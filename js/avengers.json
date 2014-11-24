@@ -1,0 +1,31 @@
+{
+	"avengers": {
+		"thor": {
+			"first": "Thor",
+			"last" : "Odinson",
+			"alias": "Thor",
+			"description": "Thor is son of Odin and protector of Asgard, his step brother Loki is trickster.",
+			"avatar": "img/thorodinson-200.jpg",
+			"pros": "Hammer\nStrength\nLightning",
+			"cons": "Arrogance\nPride"
+		},
+		"ironman": {
+			"first": "Tony",
+			"last" : "Stark",
+			"alias": "Iron Man",
+			"description": "Tony Stark is multibillionaire and owner of Stark Industries, the company which makes weapon. He is also Iron Man.",
+			"avatar": "img/ironman-200.jpg",
+			"pros": "Iron suit\nIntelligence\nMoney",
+			"cons": "Arrogance\nPride\nSuit\nMortal"
+		},
+		"captain": {
+			"first": "Steve",
+			"last" : "Rogers",
+			"alias": "Captain America",
+			"description": "Captain America is a super hero who fought in World War II and was frozen in ice for 70-80 years. He is a virgin.",
+			"avatar": "img/steverogers-200.jpg",
+			"pros": "Shield\nStrength",
+			"cons": "Mortal\nShield"
+		}
+	}
+}
