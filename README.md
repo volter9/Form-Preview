@@ -1,77 +1,110 @@
-# jQuery Form Preview
+# Form Preview
 
-Need to visualize some values from form elements? No problem, Form Preview to the rescue!
-This plugin for jQuery is suitable for visualizing form input into HTML elements. Want to see some examples? Sure, go for it:
+Form preview is a jQuery plugin for previewing form input in separate HTML element.
+
+Few demos:
 
 * [Hello, World!](http://jsfiddle.net/volter9/5gykse6u/)
-* [Show me your article card](http://jsfiddle.net/volter9/L1x151zf/)
-* Few more to come...
+* [Preview article card](http://jsfiddle.net/volter9/L1x151zf/)
+* [Avenger report card](http://volter9.github.io/Form-Preview/)
 
 ## Features
 
-What can do jQuery Form Preview? Hmm, it can do a lot of things, but everything is depends on your imagination.
+* Preview form input
+* Process input before output in preview element
+* Fill input in elements or element' attributes
 
-## Usage
+## Documentation
 
-This plugin is really easy to use.
+### jQuery Preview function
 
-### $(element).preview(options)
-
-What we've got here? This is the core of jQuery plugin. Here's the syntax of this function:
+`$(element).preview(options)` - is the core for Form Preview jQuery plugin. Here's the syntax of this function:
 
 ```js
-$('#id').preview({
+$('#element').preview({
 	form   : 'article > form',
 	fields : 'input, select',
 	event  : 'change',
 	init   : function (preview) {
 		// Code related to preview before setup should be executed here
-	},
+	}
 })
 ```
 
-So what's those arguments about?
+Detailed description of options mentioned above and more:
 
-* `#id` - Desired element which is your target, basically, the ~~div~~ any element that contains previewed markup. See **Markup** section
-* `form: 'article > form'` - Form which is going to be used, only one form allowed per preview, **required option**.
-* `fields: 'input, select',` - Which form elements you want in form to be *parsed*. Default: `'input, textarea, select'`.
-* `event: 'change'` - Which event would trigger preview. Default: `'input'`.
-* `init: function (preview) {}` - Initialization callback, add processors if you need to on different fields.
+`#element` - Desired element which is your target, basically, any element that contains previewed markup. See **Markup** section
+`form: 'article > form'` - Form which is going to be used, only one form allowed per preview, **required option**.
+`fields: 'input, select',` - Which form elements you want in form to be *parsed*. Default: `'input, textarea, select'`.
+`event: 'change'` - Which event would trigger preview. Default: `'input'`.
+`init: function (preview) {}` - Initialization callback, add processors if you need to on different fields.
 
 ### Preview.addProcessor(name, callback)
 
-Need to process some values before previewing the data? Welcome to the processing 101 in Form Preview!
+Preview.addProcessor adds a processor to specific field which will process the value before putting form input into target element (`#element`);
 
 First argument is the `name` of the field, second argument is `callback` which will process the input. Example of `callback` that will capitalize `title` field before outputting:
 
 ```js
-preview.addProcessor('title', function (name, value, input) {
-	return value.toUpperCase();
+$('#element').preview({
+	/* ... */
+	init : function (preview) {
+		// Add processor to field title
+		preview.addProcessor('title', function (name, value, input) {
+			return value.toUpperCase();
+		});
+	},
 });
 ```
 
 `callback` takes three parameters:
 
-* `name` - The same as first argument in `addProcessor` method. That's in case if you need the name of the field, but you want to avoid repetition and follow DRY principle.
-* `value` - Value of `name` field before passed to you before previewing.
-* `input` - Plain object of other values, in case if your value should depend on other field value.
+`name` - The name of field. That's in case if you need the name, but you want to avoid repetition and follow DRY principle or if you're using same callback to several fields.
+`value` - Value of `name` field before passed to you before previewing.
+`input` - Plain object of other values in the form, in case if your value should depend on other field's value.
 
 ### Markup
 
 In this version, you need to specify markup for preview to be filled in HTML.
 jQuery Form Preview plugin supports three data-* attributes to help you build previews.
 
-In the `#id` element you should put desired HTML with following attributes:
+In the `#element` element you should put desired HTML with following additional attributes:
 
-* `data-preview="field"` - Field which will be used to fill information inside of the element (`.html()` is used for non attribute fields). **Required attribute** in order to make work other data-* attributes.
-* `data-attr="attribute"` - Specify attribute to fill values in attribute instead of content. **Only one attribute** is supported yet.
-* `data-pattern="Peter %s pattern %s"` - If you need not just output, but also a label in front of it, or you want to use the value twice or three times, then this it is a job for *super-pattern-man*. Use `%s` to insert your value. data-pattern **works with** data-preview as well as with data-attribute.
+`data-preview="field"` - Field which will be used to fill information inside of the element (`.html()` is used for non attribute fields). **Required attribute** in order to make work other data-* attributes.
+`data-attr="attribute"` - Specify attribute to fill values in attribute instead of content. **Only one attribute** is supported yet.
+`data-pattern="Peter %s pattern %s"` - If you need not just output, but also a label in front of it, or you want to use the value twice or three times. Use `%s` to insert your value. data-pattern also **works with** data-preview as well as with data-attribute.
 
-That's it! Thank you for attention, fellows!
+Example:
+
+```html
+<div id="preview">
+	<p data-preview="name" data-pattern="Hello, %s!">Hello, user!</p>
+</div>
+
+<form id="form">
+	Enter your name:
+	<input name="name" type="text" value="World"/>
+</form>
+
+<script>
+	$('#preview').preview({
+		form : '#form'
+	});
+</script>
+```
+
+Following code is hello world for Form Preview. When you'll enter something in "name" input, the paragraph in `#preview` will change to the value of "name" input.
+
+## ToDo
+
+ [ ] Add VanillaJS version
+ [ ] Add post-processors and pre-processors of input
+ [ ] Add definition of fields without markup using JS plain objects or JSON
+ [ ] Add form default filling
 
 ## License
 
-Hmm, usually in this section there's a license. Here's MIT license for you:
+Following code is released under MIT license:
 
 Copyright (c) 2014 volter9
 
