@@ -97,10 +97,10 @@ Following code is hello world for Form Preview. When you'll enter something in "
 
 ## ToDo
 
- [ ] Add VanillaJS version
- [ ] Add post-processors and pre-processors of input
- [ ] Add definition of fields without markup using JS plain objects or JSON
- [ ] Add form default filling
+- [ ] Add VanillaJS version
+- [ ] Add post-processors and pre-processors of input
+- [ ] Add definition of fields without markup using JS plain objects or JSON
+- [ ] Add form default filling
 
 ## License
 
