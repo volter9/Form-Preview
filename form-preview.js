@@ -18,6 +18,16 @@
 	}
 	
 	/**
+	 * Removes any HTML from input
+	 *
+	 * @param {String} input
+	 * @return {String}
+	 */
+	function textify (input) {
+		return $('<span>').text(input).html();
+	}
+	
+	/**
 	 * Preview constructor.
 	 * 
 	 * @param {Object} options
@@ -65,7 +75,7 @@
 			if (!data) {
 				return;
 			}
-						
+			
 			data.value = _this.process(data.name, data.value);
 			
 			_this.update(data.name, data.value);
@@ -85,6 +95,8 @@
 	Preview.prototype.process = function (name, value) {
 		var oldValue  = value;
 		var processor = this.processors[name];
+		
+		value = textify(data.value);
 		
 		if (processor) {
 			value = processor(name, value, this.data);
