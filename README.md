@@ -34,9 +34,13 @@ $('#element').preview({
 Detailed description of options mentioned above and more:
 
 `#element` - Desired element which is your target, basically, any element that contains previewed markup. See **Markup** section
+
 `form: 'article > form'` - Form which is going to be used, only one form allowed per preview, **required option**.
+
 `fields: 'input, select',` - Which form elements you want in form to be *parsed*. Default: `'input, textarea, select'`.
+
 `event: 'change'` - Which event would trigger preview. Default: `'input'`.
+
 `init: function (preview) {}` - Initialization callback, add processors if you need to on different fields.
 
 ### Preview.addProcessor(name, callback)
@@ -60,7 +64,9 @@ $('#element').preview({
 `callback` takes three parameters:
 
 `name` - The name of field. That's in case if you need the name, but you want to avoid repetition and follow DRY principle or if you're using same callback to several fields.
+
 `value` - Value of `name` field before passed to you before previewing.
+
 `input` - Plain object of other values in the form, in case if your value should depend on other field's value.
 
 ### Markup
@@ -70,8 +76,11 @@ jQuery Form Preview plugin supports three data-* attributes to help you build pr
 
 In the `#element` element you should put desired HTML with following additional attributes:
 
+
 `data-preview="field"` - Field which will be used to fill information inside of the element (`.html()` is used for non attribute fields). **Required attribute** in order to make work other data-* attributes.
+
 `data-attr="attribute"` - Specify attribute to fill values in attribute instead of content. **Only one attribute** is supported yet.
+
 `data-pattern="Peter %s pattern %s"` - If you need not just output, but also a label in front of it, or you want to use the value twice or three times. Use `%s` to insert your value. data-pattern also **works with** data-preview as well as with data-attribute.
 
 Example:
