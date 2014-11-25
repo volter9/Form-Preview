@@ -111,6 +111,10 @@ body > header div.unit-60 > p {
 	padding-bottom: 20px;
 }
 
+#avenger-preview img {
+	border-radius: 10px;
+}
+
 #avenger-preview p.lead {
 	font-size: 1.3em;
 	line-height: 100%;
