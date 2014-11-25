@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Form Preview](#form-preview)
+  - [Features](#features)
+  - [Documentation](#documentation)
+    - [jQuery Preview function](#jquery-preview-function)
+    - [Preview.addProcessor(name, callback)](#previewaddprocessorname-callback)
+    - [Markup](#markup)
+  - [ToDo](#todo)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Form Preview
 
 Form preview is a jQuery plugin for previewing form input in separate HTML element.
