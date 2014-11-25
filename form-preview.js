@@ -96,7 +96,7 @@
 		var oldValue  = value;
 		var processor = this.processors[name];
 		
-		value = textify(data.value);
+		value = textify(value);
 		
 		if (processor) {
 			value = processor(name, value, this.data);
