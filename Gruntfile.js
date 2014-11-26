@@ -6,7 +6,12 @@ module.exports = function(grunt) {
 		},
 		uglify: {
 			options: {
-				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+				banner: '/**\n'
+					  + ' * <%=pkg.description%>\n'
+					  + ' * \n'
+					  + ' * @author <%=pkg.author%>\n'
+					  + ' * @copyright <%=pkg.author%> (c) 2014 \n'
+					  + ' */\n'
 			},
 			build: {
 				src:  'form-preview.js',
