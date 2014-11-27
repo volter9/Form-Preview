@@ -8,6 +8,7 @@
     - [jQuery Preview function](#jquery-preview-function)
     - [Preview.addProcessor(name, callback)](#previewaddprocessorname-callback)
     - [Markup](#markup)
+    - [Example](#example)
   - [ToDo](#todo)
   - [License](#license)
 
@@ -98,7 +99,7 @@ In the `#element` element you should put desired HTML with following additional 
 
 `data-pattern="Peter %s pattern %s"` - If you need not just output, but also a label in front of it, or you want to use the value twice or three times. Use `%s` to insert your value. data-pattern also **works with** data-preview as well as with data-attribute.
 
-Example:
+### Example 
 
 ```html
 <div id="preview">
