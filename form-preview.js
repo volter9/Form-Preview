@@ -159,7 +159,7 @@
 		}
 		
 		var value = this.data[field];
-		var element = this.target.find('[data-preview=' + field + ']');
+		var element = this.target.find('[data-preview="' + field + '"]');
 						
 		var attribute = element.attr('data-attr'),
 			pattern   = element.attr('data-pattern');
